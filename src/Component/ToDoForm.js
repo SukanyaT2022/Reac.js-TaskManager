@@ -1,10 +1,22 @@
 import React from 'react'
 import { useState } from 'react'
 
-const ToDoForm = () => {
-const [newToDo,setNewToDo] = useState('')
-const [deadLine,setDeadLine] = useState('')
+const ToDoForm = ({editeToDo,onAdd, onUpdate}) => {
+const [newToDo,setNewToDo] = useState('');
+const [deadLine,setDeadLine] = useState('');
 
+const handleAddOrUpdate =()=>{
+  if (newToDo.trim() === '') return ;
+const updatedToDo = {
+  id : editeToDo ? editeToDo.id : Date.now(),
+  text: newToDo, 
+  completed : editeToDo ? editeToDo.completed : false,
+  deadLine : deadLine || null,
+  createdAt : editeToDo ? editeToDo.createdAt : new Date(),
+  // continue here
+}
+
+}
 
   return (
     <div>
