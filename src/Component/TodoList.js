@@ -42,7 +42,7 @@ const TodoList = () => {
         ? { ...singleToDo, completed: !singleToDo.completed }
         : singleToDo
     );
-    setToDos(updatedToDoToggle)
+    setToDos(updatedToDoToggle);
   };
 
   return (
@@ -56,8 +56,6 @@ const TodoList = () => {
             key={toDo.id}
             Individual2do={toDo}
             onEdit={() => editedToDo(toDos)}
-            // cotinue next week delete and toggle function
-
             onDelete={() => DeleteToDo(toDo.id)}
             onToggleCompleted={() => toggleCompleted(toDo.id)}
           />

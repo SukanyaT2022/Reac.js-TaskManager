@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import ToDoForm from './Component/ToDoForm'
 
 const App = () => {
   //crate to do list
@@ -13,7 +14,7 @@ const App = () => {
 
   return (
     <div>
-
+<ToDoForm/>
 
 
     </div>
